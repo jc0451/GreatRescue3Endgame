@@ -7,7 +7,7 @@ public class PlayGameScript : MonoBehaviour
     // Start is called before the first frame update
     public void LoadMainScene()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("3. MainScene");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("2. Comic");
     }
 
     // Update is called once per frame

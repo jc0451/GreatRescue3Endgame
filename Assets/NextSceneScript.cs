@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NextSceneScript : MonoBehaviour
 {
@@ -15,7 +16,9 @@ public class NextSceneScript : MonoBehaviour
     {
         if (Input.anyKey)
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("3. MainScene");
+           
+            UnityEngine.SceneManagement.SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
         }
     }
 }
