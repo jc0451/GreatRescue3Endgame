@@ -105,7 +105,7 @@ public class RangedEnemy2 : MonoBehaviour
     void OnCollisionEnter2D(Collision2D col)
     {
 
-        if (col.gameObject.name == "BulletPrefab(Clone)")
+        if (col.gameObject.tag == "PlayerBullet")
         {
 
             changecolor = true;
