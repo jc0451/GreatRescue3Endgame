@@ -16,13 +16,15 @@ public class PlayerGun : MonoBehaviour
     [SerializeField]
     private Transform BulletPrefab;
 
+    [SerializeField]
+    private Transform BulletPrefab2;
+
     public static bool multi = false;
 
     Transform firePoint;
     Transform firePoint2;
     Transform firePoint3;
 
-    float fireTimer = 0;
     float time;
     public float firerate;
 
@@ -97,9 +99,9 @@ public class PlayerGun : MonoBehaviour
     {
         if (multi == true)
         {
-            Instantiate(BulletPrefab, firePoint.position, firePoint.rotation);
-            Instantiate(BulletPrefab, firePoint.position, firePoint2.rotation);
-            Instantiate(BulletPrefab, firePoint.position, firePoint3.rotation);
+            Instantiate(BulletPrefab2, firePoint.position, firePoint.rotation);
+            Instantiate(BulletPrefab2, firePoint.position, firePoint2.rotation);
+            Instantiate(BulletPrefab2, firePoint.position, firePoint3.rotation);
         }
         else
         {
