@@ -29,11 +29,19 @@ public class ChadLaser : MonoBehaviour
         }
         if (ultrue == true)
         {
-            gameObject.transform.GetChild(6).gameObject.SetActive(true);
-            var hurtboxob = (GameObject)Instantiate(hurtbox);
-            hurtboxob.transform.position = gameObject.transform.position;
-            hurtboxob.transform.parent = gameObject.transform;
+            timeactual -= Time.deltaTime;
+       
+            
+            if (timeactual <= 0.0f)
+            {
 
+                gameObject.transform.GetChild(6).gameObject.SetActive(true);
+                var hurtboxob = (GameObject)Instantiate(hurtbox);
+                hurtboxob.transform.position = gameObject.transform.position;
+                hurtboxob.transform.parent = gameObject.transform;
+
+                timeactual = 0.5f;
+            }
         }
         if (ultrue == false)
         {
@@ -163,7 +171,7 @@ public class ChadLaser : MonoBehaviour
 
             if (timeactual <= 0.0f)
             {
-                SendMessageUpwards("shootingup");
+                
                 gameObject.transform.GetChild(4).gameObject.SetActive(false);
                 gameObject.transform.GetChild(0).gameObject.SetActive(false);
                 gameObject.transform.GetChild(5).gameObject.SetActive(false);
