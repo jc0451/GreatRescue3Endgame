@@ -13,6 +13,7 @@ public class Progress : MonoBehaviour
     public GameObject N7;
     public GameObject N8;
     private int wavenr;
+    private bool bghasmoved=false;
    
     // Start is called before the first frame update
     void Start()
@@ -26,22 +27,46 @@ public class Progress : MonoBehaviour
     {
         if(BgScroll.MoveBg == true)
         {
-            wavenr++;
+            bghasmoved = true;
            
         }
+        if(BgScroll.MoveBg == false)
+        {
+            if (bghasmoved == true)
+            {
+                bghasmoved = false;
+                wavenr++;
+            }
+                
+        }
+     
         if (wavenr == 2)
+        {
             transform.position = Vector2.MoveTowards(transform.position, N2.transform.position, 30 * Time.deltaTime);
+        }
         if (wavenr == 3)
+        {
             transform.position = Vector2.MoveTowards(transform.position, N3.transform.position, 30 * Time.deltaTime);
+        }
         if (wavenr == 4)
+        {
             transform.position = Vector2.MoveTowards(transform.position, N4.transform.position, 30 * Time.deltaTime);
+        }
         if (wavenr == 5)
+        {
             transform.position = Vector2.MoveTowards(transform.position, N5.transform.position, 30 * Time.deltaTime);
+        }
         if (wavenr == 6)
+        {
             transform.position = Vector2.MoveTowards(transform.position, N6.transform.position, 30 * Time.deltaTime);
+        }
         if (wavenr == 7)
+        {
             transform.position = Vector2.MoveTowards(transform.position, N7.transform.position, 30 * Time.deltaTime);
+        }
         if (wavenr == 8)
+        {
             transform.position = Vector2.MoveTowards(transform.position, N8.transform.position, 30 * Time.deltaTime);
+        }
     }
 }
