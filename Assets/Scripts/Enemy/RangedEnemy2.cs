@@ -102,7 +102,7 @@ public class RangedEnemy2 : MonoBehaviour
 
 
     }
-    void OnCollisionEnter2D(Collision2D col)
+    void OnTriggerEnter2D(Collision2D col)
     {
 
         if (col.gameObject.name == "BulletPrefab(Clone)")
