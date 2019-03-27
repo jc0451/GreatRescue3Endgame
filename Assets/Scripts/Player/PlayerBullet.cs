@@ -19,21 +19,35 @@ public class PlayerBullet : MonoBehaviour
         transform.Translate(Vector2.right * Time.deltaTime * bulletVelocity);
         //  Destroy();
     }
-   
+
     void OnCollisionEnter2D(Collision2D col)
     {
-        
-        if (col.gameObject.tag == "RangedEnemy1"|| col.gameObject.tag == "orc")
+
+        if (col.gameObject.tag == "RangedEnemy1" || col.gameObject.tag == "orc")
         {
             m_MyAudioSource.Play();
             pierced++;
-            if(pierce ==false)
+            if (pierce == false)
             { Destroy(gameObject); }
             if (pierced >= 2)
             {
                 ScreenShake.shakeDuration = 0.5f;
             }
         }
-      
+
+    }
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "RangedEnemy1" || col.gameObject.tag == "orc")
+        {
+            m_MyAudioSource.Play();
+            pierced++;
+            if (pierce == false)
+            { Destroy(gameObject); }
+            if (pierced >= 2)
+            {
+                ScreenShake.shakeDuration = 0.5f;
+            }
+        }
     }
 }
