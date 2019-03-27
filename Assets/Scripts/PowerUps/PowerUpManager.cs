@@ -6,13 +6,16 @@ public class PowerUpManager : MonoBehaviour
 {
     public GameObject PowerUp1;
     public GameObject PowerUp2;
+    public GameObject PowerUp3;
     private GameObject PowerUp1instance;
     private GameObject PowerUp2instance;
+    private GameObject PowerUp3instance;
     private int pick;
     public static bool powerspawn = false;
     public static Vector3 entitypos;
     public int Pw1LuckCap;
     public int Pw2LuckCap;
+    public int Pw3LuckCap;
 
     // Start is called before the first frame update
     void Start()
@@ -32,7 +35,7 @@ public class PowerUpManager : MonoBehaviour
     {
         powerspawn = false;
 
-        pick = Random.Range(1, 3);
+        pick = Random.Range(1, 4);
         
         if (pick == 1)
         {
@@ -53,6 +56,15 @@ public class PowerUpManager : MonoBehaviour
                
                 PowerUp2instance = Instantiate(PowerUp2) as GameObject;
                 PowerUp2instance.transform.position = entitypos;
+            }
+        }
+        if (pick == 2)
+        {
+            if (Random.Range(1, Pw3LuckCap + 1) == 1)
+            {
+
+                PowerUp3instance = Instantiate(PowerUp3) as GameObject;
+                PowerUp3instance.transform.position = entitypos;
             }
         }
     }
