@@ -19,6 +19,9 @@ public class PlayerGun : MonoBehaviour
     [SerializeField]
     private Transform BulletPrefab2;
 
+    [SerializeField]
+    private Transform BulletPrefab3;
+
     public static bool multi = false;
 
     Transform firePoint;
@@ -105,7 +108,14 @@ public class PlayerGun : MonoBehaviour
         }
         else
         {
-            Instantiate(BulletPrefab, firePoint.position, firePoint.rotation);
+            if (PlayerBullet.pierce == true)
+            {
+                Instantiate(BulletPrefab3, firePoint.position, firePoint.rotation);
+            }
+            else
+            {
+                Instantiate(BulletPrefab, firePoint.position, firePoint.rotation);
+            }
         }
     }
 }
