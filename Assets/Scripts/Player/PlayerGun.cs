@@ -110,7 +110,7 @@ public class PlayerGun : MonoBehaviour
         {
             if (PlayerBullet.pierce == true)
             {
-                Instantiate(BulletPrefab3, firePoint.position, firePoint.rotation);
+                Instantiate(BulletPrefab2, firePoint.position, firePoint.rotation);
             }
             else
             {

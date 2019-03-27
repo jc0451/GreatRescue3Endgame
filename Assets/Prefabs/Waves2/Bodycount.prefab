@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2880948444372732861}
-  - component: {fileID: 2880948444372732860}
   m_Layer: 0
   m_Name: Bodycount
   m_TagString: Untagged
@@ -31,44 +30,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2880948444372732860
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2880948444372732863}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 197c1c47c2f1d8d41b3ab0fe06b232a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  G1: 4
-  O1: 1
-  T1: 3
-  G2: 9
-  O2: 3
-  T2: 3
-  G3: 15
-  O3: 4
-  T3: 6
-  G4: 16
-  O4: 5
-  T4: 4
-  G5: 17
-  O5: 5
-  T5: 6
-  G6: 18
-  O6: 5
-  T6: 6
-  G7: 36
-  O7: 7
-  T7: 5
-  Wave1: {fileID: 0}
-  Wave2: {fileID: 0}
-  Wave3: {fileID: 0}
-  Wave4: {fileID: 0}
-  Wave5: {fileID: 0}
-  Wave6: {fileID: 0}
-  Wave7: {fileID: 0}
-  Wave8: {fileID: 0}

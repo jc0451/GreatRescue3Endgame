@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Chad : MonoBehaviour
 {
+    public GameObject GameObj;
     private Vector2 target1;
     private Vector2 target2;
     private Vector2 target3;
@@ -64,6 +65,8 @@ public class Chad : MonoBehaviour
             DeathParticle = Instantiate(DeathParticle) as GameObject;
             DeathParticle.transform.position = deathloc.transform.position;
             DeathSound.transform.position = gameObject.transform.position;
+            GameObj.SetActive(true);
+
             Destroy(gameObject);
         }
 
