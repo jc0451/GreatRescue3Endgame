@@ -2020,7 +2020,7 @@ GameObject:
   - component: {fileID: 294366278}
   - component: {fileID: 294366279}
   m_Layer: 0
-  m_Name: L5R4
+  m_Name: Row5Col4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2529,7 +2529,7 @@ GameObject:
   - component: {fileID: 355424787}
   - component: {fileID: 355424788}
   m_Layer: 0
-  m_Name: L3R3
+  m_Name: Row3Col3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3164,7 +3164,7 @@ GameObject:
   - component: {fileID: 412619392}
   - component: {fileID: 412619393}
   m_Layer: 0
-  m_Name: L1R3
+  m_Name: Row1Col3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3383,7 +3383,7 @@ GameObject:
   - component: {fileID: 434265166}
   - component: {fileID: 434265167}
   m_Layer: 0
-  m_Name: L2R3
+  m_Name: Row2Col3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5066,7 +5066,7 @@ GameObject:
   - component: {fileID: 624927440}
   - component: {fileID: 624927441}
   m_Layer: 0
-  m_Name: L6R1
+  m_Name: Row6Col1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5200,7 +5200,7 @@ GameObject:
   - component: {fileID: 637723489}
   - component: {fileID: 637723488}
   m_Layer: 0
-  m_Name: L2R1
+  m_Name: Row2Col1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5623,7 +5623,7 @@ GameObject:
   - component: {fileID: 718076478}
   - component: {fileID: 718076479}
   m_Layer: 0
-  m_Name: L3R2
+  m_Name: Row3Col2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5764,7 +5764,7 @@ GameObject:
   - component: {fileID: 749370920}
   - component: {fileID: 749370921}
   m_Layer: 0
-  m_Name: L5R1
+  m_Name: Row5Col1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6132,7 +6132,7 @@ GameObject:
   - component: {fileID: 810532723}
   - component: {fileID: 810532724}
   m_Layer: 0
-  m_Name: L5R3
+  m_Name: Row5Col3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6367,7 +6367,7 @@ GameObject:
   - component: {fileID: 880337561}
   - component: {fileID: 880337562}
   m_Layer: 0
-  m_Name: L3R4
+  m_Name: Row3Col4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6414,7 +6414,7 @@ GameObject:
   - component: {fileID: 885520031}
   - component: {fileID: 885520032}
   m_Layer: 0
-  m_Name: L1R4
+  m_Name: Row1Col4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6773,7 +6773,7 @@ GameObject:
   - component: {fileID: 963333303}
   - component: {fileID: 963333304}
   m_Layer: 0
-  m_Name: L6R3
+  m_Name: Row6Col3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7182,7 +7182,7 @@ GameObject:
   - component: {fileID: 1066656494}
   - component: {fileID: 1066656495}
   m_Layer: 0
-  m_Name: L5R2
+  m_Name: Row5Col2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7276,7 +7276,7 @@ GameObject:
   - component: {fileID: 1096017384}
   - component: {fileID: 1096017383}
   m_Layer: 0
-  m_Name: L1R1
+  m_Name: Row1Col1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7624,7 +7624,7 @@ GameObject:
   - component: {fileID: 1209118137}
   - component: {fileID: 1209118138}
   m_Layer: 0
-  m_Name: L4R4
+  m_Name: Row4Col4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8540,7 +8540,7 @@ GameObject:
   - component: {fileID: 1313199155}
   - component: {fileID: 1313199156}
   m_Layer: 0
-  m_Name: L4R1
+  m_Name: Row4Col1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8743,7 +8743,7 @@ GameObject:
   - component: {fileID: 1370807930}
   - component: {fileID: 1370807931}
   m_Layer: 0
-  m_Name: L6R2
+  m_Name: Row6Col2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8837,7 +8837,7 @@ GameObject:
   - component: {fileID: 1393812864}
   - component: {fileID: 1393812865}
   m_Layer: 0
-  m_Name: L2R4
+  m_Name: Row2Col4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9536,7 +9536,7 @@ GameObject:
   - component: {fileID: 1457673776}
   - component: {fileID: 1457673777}
   m_Layer: 0
-  m_Name: L3R1
+  m_Name: Row3Col1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9950,7 +9950,7 @@ GameObject:
   - component: {fileID: 1560815574}
   - component: {fileID: 1560815575}
   m_Layer: 0
-  m_Name: L4R3
+  m_Name: Row4Col3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10742,7 +10742,7 @@ GameObject:
   - component: {fileID: 1598388902}
   - component: {fileID: 1598388903}
   m_Layer: 0
-  m_Name: L1R2
+  m_Name: Row1Col2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10789,7 +10789,7 @@ GameObject:
   - component: {fileID: 1603858914}
   - component: {fileID: 1603858915}
   m_Layer: 0
-  m_Name: L2R2
+  m_Name: Row2Col2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11559,7 +11559,7 @@ GameObject:
   - component: {fileID: 1769004492}
   - component: {fileID: 1769004493}
   m_Layer: 0
-  m_Name: L6R4
+  m_Name: Row6Col4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11811,7 +11811,7 @@ GameObject:
   - component: {fileID: 1840499647}
   - component: {fileID: 1840499648}
   m_Layer: 0
-  m_Name: L4R2
+  m_Name: Row4Col2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
