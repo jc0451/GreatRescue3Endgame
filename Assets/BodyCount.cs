@@ -35,6 +35,17 @@ public class BodyCount : MonoBehaviour
     [SerializeField]
     public int T5;
     [SerializeField]
+    public int G6;
+    [SerializeField]
+    public int O6;
+    [SerializeField]
+    public int T6;
+    [SerializeField]
+    public int G7;
+    [SerializeField]
+    public int O7;
+    [SerializeField]
+    public int T7;
     public static int Goblin = 0;
     public static int Orc = 0;
     public static int Troll = 0;
@@ -48,14 +59,23 @@ public class BodyCount : MonoBehaviour
     public GameObject Wave4;
     [SerializeField]
     public GameObject Wave5;
+    [SerializeField]
+    public GameObject Wave6;
+    [SerializeField]
+    public GameObject Wave7;
+    [SerializeField]
+    public GameObject Wave8;
 
     bool W1 = true;
     bool W2 = false;
     bool W3 = false;
     bool W4 = false;
     bool W5 = false;
-   
-   
+    bool W6 = false;
+    bool W7 = false;
+    bool W8 = false;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -71,7 +91,13 @@ public class BodyCount : MonoBehaviour
         G5 += G4;
         O5 += O4;
         T5 += T4;
-        
+        G6 += G5;
+        O6 += O5;
+        T6 += T5;
+        G7 += G6;
+        O7 += O6;
+        T7 += T6;
+      
     }
 
     // Update is called once per frame
@@ -110,10 +136,33 @@ public class BodyCount : MonoBehaviour
         {
             if (BgScroll.MoveBg == false)
             { Wave5.SetActive(true); }
-           
+            Wave5Check();
 
         }
+        if (W6 == true)
+        {
+            if (BgScroll.MoveBg == false)
+            { Wave6.SetActive(true); }
+            Wave6Check();
 
+
+        }
+        if (W7 == true)
+        {
+            if (BgScroll.MoveBg == false)
+            { Wave7.SetActive(true); }
+            Wave7Check();
+
+
+        }
+        if (W8 == true)
+        {
+            if (BgScroll.MoveBg == false)
+            { Wave8.SetActive(true); }
+
+
+        }
+   
 
 
     }
@@ -179,6 +228,51 @@ public class BodyCount : MonoBehaviour
                 Wave4.SetActive(false);
                 
                 W4 = false;
+            }
+        }
+
+    }
+    void Wave5Check()
+    {
+        if (G5 == Goblin && O5 == Orc && T5 == Troll)
+        {
+            if (BgScroll.MoveBg == false)
+            {
+                W6 = true;
+                BgScroll.MoveBg = true;
+                Wave5.SetActive(false);
+
+                W5 = false;
+            }
+        }
+
+    }
+    void Wave6Check()
+    {
+        if (G6 == Goblin && O6 == Orc && T6 == Troll)
+        {
+            if (BgScroll.MoveBg == false)
+            {
+                W7 = true;
+                BgScroll.MoveBg = true;
+                Wave6.SetActive(false);
+
+                W6 = false;
+            }
+        }
+
+    }
+    void Wave7Check()
+    {
+        if (G7 == Goblin && O7 == Orc && T7 == Troll)
+        {
+            if (BgScroll.MoveBg == false)
+            {
+                W8 = true;
+                BgScroll.MoveBg = true;
+                Wave7.SetActive(false);
+
+                W7 = false;
             }
         }
 
