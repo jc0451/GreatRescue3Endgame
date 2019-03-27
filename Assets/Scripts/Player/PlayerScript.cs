@@ -178,7 +178,7 @@ public class PlayerScript : MonoBehaviour
         //checks if colliding with enemies
         if (ImmunityTimer <= 0)
         {
-            if (col.gameObject.tag == "RangedEnemy1" || col.gameObject.name == "EnemyBulletGO(Clone)")
+            if (col.gameObject.tag == "RangedEnemy1" || col.gameObject.name == "EnemyBulletGO(Clone)" || col.gameObject.tag =="chadb")
             {
                 HealthScore.HealthValue -= 1;
                 m_MyAudioSource.Play();
