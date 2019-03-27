@@ -27,36 +27,119 @@ public class LaserBox : MonoBehaviour
             
             SendMessageUpwards("chargingup");
             gameObject.transform.GetChild(0).gameObject.SetActive(true);
-           
+            gameObject.transform.GetChild(5).gameObject.SetActive(true);
+
         }
-        if (timeactual <= 1.8f)
+        if (timeactual <= 1.9f)
         {
             
             gameObject.transform.GetChild(1).gameObject.SetActive(true);
-            
+            gameObject.transform.GetChild(0).gameObject.SetActive(false);
+
 
         }
-        if (timeactual <= 1.3f)
+        if (timeactual <= 1.8f)
         {
 
             gameObject.transform.GetChild(2).gameObject.SetActive(true);
             gameObject.transform.GetChild(1).gameObject.SetActive(false);
 
         }
-        if (timeactual <= 0.8f)
+        if (timeactual <= 1.7f)
         {
 
             gameObject.transform.GetChild(3).gameObject.SetActive(true);
             gameObject.transform.GetChild(2).gameObject.SetActive(false);
 
         }
-        if (timeactual <= 0.4f)
+        if (timeactual <= 1.6f)
         {
 
             gameObject.transform.GetChild(4).gameObject.SetActive(true);
             gameObject.transform.GetChild(3).gameObject.SetActive(false);
 
         }
+        if (timeactual <= 1.5f)
+        {
+            gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            gameObject.transform.GetChild(4).gameObject.SetActive(false);
+        }
+        if (timeactual <= 1.4f)
+        {
+            gameObject.transform.GetChild(1).gameObject.SetActive(true);
+            gameObject.transform.GetChild(0).gameObject.SetActive(false);
+        }
+        if (timeactual <= 1.3f)
+        {
+            gameObject.transform.GetChild(2).gameObject.SetActive(true);
+            gameObject.transform.GetChild(1).gameObject.SetActive(false);
+        }
+        if (timeactual <= 1.2f)
+        {
+            gameObject.transform.GetChild(3).gameObject.SetActive(true);
+            gameObject.transform.GetChild(2).gameObject.SetActive(false);
+        }
+        if (timeactual <= 1.1f)
+        {
+            gameObject.transform.GetChild(4).gameObject.SetActive(true);
+            gameObject.transform.GetChild(3).gameObject.SetActive(false);
+        }
+        if (timeactual <= 1.0f)
+        {
+            gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            gameObject.transform.GetChild(4).gameObject.SetActive(false);
+        }
+        if (timeactual <= 0.9f)
+        {
+            gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            gameObject.transform.GetChild(4).gameObject.SetActive(false);
+        }
+        if (timeactual <= 0.9f)
+        {
+            gameObject.transform.GetChild(1).gameObject.SetActive(true);
+            gameObject.transform.GetChild(0).gameObject.SetActive(false);
+        }
+        if (timeactual <= 0.8f)
+        {
+            gameObject.transform.GetChild(2).gameObject.SetActive(true);
+            gameObject.transform.GetChild(1).gameObject.SetActive(false);
+        }
+        if (timeactual <= 0.7f)
+        {
+            gameObject.transform.GetChild(3).gameObject.SetActive(true);
+            gameObject.transform.GetChild(2).gameObject.SetActive(false);
+        }
+        if (timeactual <= 0.6f)
+        {
+            gameObject.transform.GetChild(4).gameObject.SetActive(true);
+            gameObject.transform.GetChild(3).gameObject.SetActive(false);
+        }
+        if (timeactual <= 0.5f)
+        {
+            gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            gameObject.transform.GetChild(4).gameObject.SetActive(false);
+        }
+        if (timeactual <= 0.4f)
+        {
+            gameObject.transform.GetChild(1).gameObject.SetActive(true);
+            gameObject.transform.GetChild(0).gameObject.SetActive(false);
+        }
+        if (timeactual <= 0.3f)
+        {
+            gameObject.transform.GetChild(2).gameObject.SetActive(true);
+            gameObject.transform.GetChild(1).gameObject.SetActive(false);
+        }
+        if (timeactual <= 0.2f)
+        {
+            gameObject.transform.GetChild(3).gameObject.SetActive(true);
+            gameObject.transform.GetChild(2).gameObject.SetActive(false);
+        }
+        if (timeactual <= 0.1f)
+        {
+            gameObject.transform.GetChild(4).gameObject.SetActive(true);
+            gameObject.transform.GetChild(3).gameObject.SetActive(false);
+        }
+
 
 
         if (timeactual <= 0.0f)
@@ -64,6 +147,7 @@ public class LaserBox : MonoBehaviour
             SendMessageUpwards("shootingup");
             gameObject.transform.GetChild(4).gameObject.SetActive(false);
             gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            gameObject.transform.GetChild(5).gameObject.SetActive(false);
             var hurtboxob = (GameObject)Instantiate(hurtbox);
             hurtboxob.transform.position = gameObject.transform.position;
             hurtboxob.transform.parent = gameObject.transform;

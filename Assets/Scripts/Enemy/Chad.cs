@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Chad : MonoBehaviour
 {
-    public GameObject GameObj;
     private Vector2 target1;
     private Vector2 target2;
     private Vector2 target3;
@@ -30,6 +29,8 @@ public class Chad : MonoBehaviour
     public float timec;
     public float waittime;
     public float colortime = 0.5f;
+    public float timeframe = 1.7f;
+    private float timeactual;
 
     private bool wait=true;
     private int posnr;
@@ -46,6 +47,7 @@ public class Chad : MonoBehaviour
     void Start()
     {
         time = 0;
+        timeactual = timeframe;
         posnr = 1;
         target1 = targ1.transform.position;
         target2 = targ2.transform.position;
@@ -58,6 +60,116 @@ public class Chad : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timeactual -= Time.deltaTime;
+
+
+        if (timeactual <= 1.7f)
+        {
+            gameObject.transform.GetChild(5).gameObject.SetActive(false);
+            gameObject.transform.GetChild(0).gameObject.SetActive(true);
+        }
+        if (timeactual <= 1.6f)
+        {
+            gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            gameObject.transform.GetChild(1).gameObject.SetActive(true);
+        }
+        if (timeactual <= 1.5f)
+        {
+            gameObject.transform.GetChild(1).gameObject.SetActive(false);
+            gameObject.transform.GetChild(2).gameObject.SetActive(true);
+        }
+        if (timeactual <= 1.4f)
+        {
+            gameObject.transform.GetChild(2).gameObject.SetActive(false);
+            gameObject.transform.GetChild(3).gameObject.SetActive(true);
+        }
+        if (timeactual <= 1.3f)
+        {
+            gameObject.transform.GetChild(3).gameObject.SetActive(false);
+            gameObject.transform.GetChild(4).gameObject.SetActive(true);
+        }
+        if (timeactual <= 1.2f)
+        {
+            gameObject.transform.GetChild(4).gameObject.SetActive(false);
+            gameObject.transform.GetChild(5).gameObject.SetActive(true);
+        }
+        if (timeactual <= 1.1f)
+        {
+            gameObject.transform.GetChild(5).gameObject.SetActive(false);
+            gameObject.transform.GetChild(0).gameObject.SetActive(true);
+        }
+        if (timeactual <= 1.0f)
+        {
+            gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            gameObject.transform.GetChild(1).gameObject.SetActive(true);
+        }
+        if (timeactual <= 0.9f)
+        {
+            gameObject.transform.GetChild(1).gameObject.SetActive(false);
+            gameObject.transform.GetChild(2).gameObject.SetActive(true);
+        }
+        if (timeactual <= 0.8f)
+        {
+            gameObject.transform.GetChild(2).gameObject.SetActive(false);
+            gameObject.transform.GetChild(3).gameObject.SetActive(true);
+        }
+        if (timeactual <= 0.7f)
+        {
+            gameObject.transform.GetChild(3).gameObject.SetActive(false);
+            gameObject.transform.GetChild(4).gameObject.SetActive(true);
+        }
+        if (timeactual <= 0.6f)
+        {
+            gameObject.transform.GetChild(4).gameObject.SetActive(false);
+            gameObject.transform.GetChild(5).gameObject.SetActive(true);
+        }
+        if (timeactual <= 0.5f)
+        {
+            gameObject.transform.GetChild(5).gameObject.SetActive(false);
+            gameObject.transform.GetChild(0).gameObject.SetActive(true);
+        }
+        if (timeactual <= 0.4f)
+        {
+            gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            gameObject.transform.GetChild(1).gameObject.SetActive(true);
+        }
+        if (timeactual <= 0.3f)
+        {
+            gameObject.transform.GetChild(1).gameObject.SetActive(false);
+            gameObject.transform.GetChild(2).gameObject.SetActive(true);
+        }
+        if (timeactual <= 0.2f)
+        {
+            gameObject.transform.GetChild(2).gameObject.SetActive(false);
+            gameObject.transform.GetChild(3).gameObject.SetActive(true);
+        }
+        if (timeactual <= 0.1f)
+        {
+            gameObject.transform.GetChild(3).gameObject.SetActive(false);
+            gameObject.transform.GetChild(4).gameObject.SetActive(true);
+        }
+        if (timeactual <= 0.0f)
+        {
+            gameObject.transform.GetChild(4).gameObject.SetActive(false);
+            gameObject.transform.GetChild(5).gameObject.SetActive(true);
+
+            timeactual = timeframe;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         if (health <= 0)
         {
 
@@ -65,7 +177,8 @@ public class Chad : MonoBehaviour
             DeathParticle = Instantiate(DeathParticle) as GameObject;
             DeathParticle.transform.position = deathloc.transform.position;
             DeathSound.transform.position = gameObject.transform.position;
-            GameObj.SetActive(true);
+
+            BodyCount.Chad += 1;
 
             Destroy(gameObject);
         }

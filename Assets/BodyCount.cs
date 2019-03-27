@@ -46,9 +46,12 @@ public class BodyCount : MonoBehaviour
     public int O7;
     [SerializeField]
     public int T7;
+    private int C;
     public static int Goblin = 0;
     public static int Orc = 0;
     public static int Troll = 0;
+    public static int Chad = 0;
+
     [SerializeField]
     public GameObject Wave1;
     [SerializeField]
@@ -65,6 +68,8 @@ public class BodyCount : MonoBehaviour
     public GameObject Wave7;
     [SerializeField]
     public GameObject Wave8;
+    [SerializeField]
+    public GameObject Wave9;
 
     bool W1 = true;
     bool W2 = false;
@@ -74,6 +79,7 @@ public class BodyCount : MonoBehaviour
     bool W6 = false;
     bool W7 = false;
     bool W8 = false;
+    bool W9 = false;
 
 
     // Start is called before the first frame update
@@ -97,7 +103,7 @@ public class BodyCount : MonoBehaviour
         G7 += G6;
         O7 += O6;
         T7 += T6;
-      
+        C = 1;
     }
 
     // Update is called once per frame
@@ -159,17 +165,21 @@ public class BodyCount : MonoBehaviour
         {
             if (BgScroll.MoveBg == false)
             { Wave8.SetActive(true); }
+            Wave8Check();
+
+        }
+        if (W9 == true)
+        {
+            if (BgScroll.MoveBg == false)
+            { Wave9.SetActive(true); }
 
 
         }
-   
+
 
 
     }
-    void WaveCheck()
-    {
-   
-    }
+
 
 
 
@@ -273,6 +283,21 @@ public class BodyCount : MonoBehaviour
                 Wave7.SetActive(false);
 
                 W7 = false;
+            }
+        }
+
+    }
+    void Wave8Check()
+    {
+        if (Chad==C)
+        {
+            if (BgScroll.MoveBg == false)
+            {
+                W9 = true;
+                BgScroll.MoveBg = true;
+                Wave8.SetActive(false);
+
+                W8 = false;
             }
         }
 
