@@ -49,6 +49,7 @@ public class PlayerScript : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1.0f;
         m_Animator = gameObject.GetComponent<Animator>();
         m_Animator.SetBool("IsWalking", false);
         m_Animator.SetBool("Backwards", false);
