@@ -31,13 +31,7 @@ public class Shrek : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameObject.Find("PlayerCharacter") == null)
-        {
 
-
-
-            Destroy(gameObject);
-        }
         if (BgScroll.MoveBg == true)
         { Destroy(gameObject); }
 

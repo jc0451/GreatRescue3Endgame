@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3196226153977270856}
   - component: {fileID: 1093795801706851016}
   - component: {fileID: 2906177699189929040}
-  - component: {fileID: 4601157118988633528}
+  - component: {fileID: 3419688936037260136}
   m_Layer: 9
   m_Name: ChadBullet
   m_TagString: chadb
@@ -68,8 +68,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1884898337
+  m_SortingLayer: 1
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 374d5c3985d8dd34e85eaf73cf8a1f8b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -95,6 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 75
+  rotation: 20
 --- !u!50 &2906177699189929040
 Rigidbody2D:
   serializedVersion: 4
@@ -116,7 +117,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!60 &4601157118988633528
+--- !u!60 &3419688936037260136
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

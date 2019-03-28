@@ -62,13 +62,7 @@ public class RangedEnemy1 : MonoBehaviour
             }
         }
         position = gameObject.transform.position;
-        if (GameObject.Find("PlayerCharacter") == null)
-        {
-
-           
-           
-            Destroy(gameObject);
-        }
+      
  
         
         if (health <= 0)

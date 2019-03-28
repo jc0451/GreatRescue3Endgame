@@ -9,6 +9,8 @@ public class EnemyGun : MonoBehaviour
     AudioSource m_MyAudioSource;
     public GameObject EnemyBulletGO;
     public GameObject soundeffect;
+    private GameObject soundinstance;
+
     float time;
     public float fireratemin=1;
     public float fireratemax=5;
@@ -58,8 +60,8 @@ public class EnemyGun : MonoBehaviour
             bullet.transform.position = transform.position;
             Vector2 direction = player.transform.position - bullet.transform.position;
             bullet.GetComponent<EnemyBullet>().SetDirection(direction);
-            soundeffect = Instantiate(soundeffect) as GameObject;
-            soundeffect.transform.position = gameObject.transform.position;
+            soundinstance = Instantiate(soundeffect) as GameObject;
+            soundinstance.transform.position = gameObject.transform.position;
 
         }
     }

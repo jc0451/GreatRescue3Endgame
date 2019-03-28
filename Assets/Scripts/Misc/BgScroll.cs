@@ -20,6 +20,7 @@ public class BgScroll : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         Vector3 orgpos1 = BG1.transform.position;
  
         targpos1.x = -180;
@@ -35,6 +36,8 @@ public class BgScroll : MonoBehaviour
     {
         if (MoveBg == true)
         {
+            gameObject.transform.GetChild(0).gameObject.SetActive(true);
+           
             ScreenShake.shakeDuration = 0;
             BgScrollPara.MoveBgPara = true;
             BG1.transform.position = Vector2.MoveTowards(BG1.transform.position, targpos1, scrollSpeed * Time.deltaTime);
@@ -48,6 +51,7 @@ public class BgScroll : MonoBehaviour
                 BG1.transform.position = orgpos1;
                 BgScrollPara.MoveBgPara = false;
                 MoveBg = false;
+                gameObject.transform.GetChild(0).gameObject.SetActive(false);
 
             }
         }

@@ -20,6 +20,9 @@ public class ReloadGameScript : MonoBehaviour
             BodyCount.Goblin = 0;
             BodyCount.Troll = 0;
             BodyCount.Orc = 0;
+            PlayerBullet.pierce = false;
+            PlayerScript.multishot = false;
+            PlayerScript.pierceshot = false;
 
 
             PlayerScript.health = 5;

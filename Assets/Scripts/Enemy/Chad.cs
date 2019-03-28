@@ -16,6 +16,14 @@ public class Chad : MonoBehaviour
     public GameObject DeathSound;
     public GameObject DeathParticle;
 
+    public GameObject Child1;
+    public GameObject Child2;
+    public GameObject Child3;
+    public GameObject Child4;
+    public GameObject Child5;
+    public GameObject Child6;
+
+
     public GameObject targ1;
     public GameObject targ2;
     public GameObject targ3;
@@ -175,6 +183,7 @@ public class Chad : MonoBehaviour
 
            
             DeathParticle = Instantiate(DeathParticle) as GameObject;
+            DeathSound = Instantiate(DeathSound) as GameObject;
             DeathParticle.transform.position = deathloc.transform.position;
             DeathSound.transform.position = gameObject.transform.position;
 
@@ -186,12 +195,22 @@ public class Chad : MonoBehaviour
         if (changecolor == true)
         {
             timec += Time.deltaTime;
-            GetComponent<SpriteRenderer>().color = new Color(255, 0, 0, 255);
+            Child1.GetComponent<SpriteRenderer>().color = new Color(255, 0, 0, 255);
+            Child2.GetComponent<SpriteRenderer>().color = new Color(255, 0, 0, 255);
+            Child3.GetComponent<SpriteRenderer>().color = new Color(255, 0, 0, 255);
+            Child4.GetComponent<SpriteRenderer>().color = new Color(255, 0, 0, 255);
+            Child5.GetComponent<SpriteRenderer>().color = new Color(255, 0, 0, 255);
+            Child6.GetComponent<SpriteRenderer>().color = new Color(255, 0, 0, 255);
             if (timec >= colortime)
             {
                 timec = 0;
                 changecolor = false;
-                GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 255);
+                Child1.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 255);
+                Child2.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 255);
+                Child3.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 255);
+                Child4.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 255);
+                Child5.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 255);
+                Child6.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 255);
             }
         }
 
@@ -306,7 +325,7 @@ public class Chad : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col)
     {
 
-        if (col.gameObject.name == "BulletPrefab(Clone)")
+        if (col.gameObject.tag == "PlayerBullet")
         {
 
             changecolor = true;

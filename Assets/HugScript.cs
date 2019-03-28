@@ -10,7 +10,10 @@ public class HugScript : MonoBehaviour
 
     void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("6. VictoryScene");
+        }
     }
 
     void OnTriggerStay2D(Collider2D col)
@@ -23,10 +26,7 @@ public class HugScript : MonoBehaviour
 
             Rend1.enabled = true;
 
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                UnityEngine.SceneManagement.SceneManager.LoadScene("6. VictoryScene");
-            }
+           
         }
     }
 }

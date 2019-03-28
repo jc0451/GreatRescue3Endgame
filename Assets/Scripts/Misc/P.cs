@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ScoreScript : MonoBehaviour
+public class P : MonoBehaviour
 {
     public static int ScoreValue = 0;
     float t;
@@ -20,9 +20,9 @@ public class ScoreScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
-        t = PlayerScript.timeelapsedM;
+
+        t = PlayerScript.timeelapsedP;
         r = Mathf.Round(t);
-        Score.text = "0" + r;
+        Score.text = "" + r;
     }
 }

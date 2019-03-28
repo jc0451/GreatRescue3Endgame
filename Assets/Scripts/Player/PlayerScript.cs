@@ -12,12 +12,15 @@ public class PlayerScript : MonoBehaviour
 
     public float piercingtime = 5f;
     public float multiTime = 5f;
-    private float timeelapsed = 0;
+    public static float timeelapsedP = 0;
+    public static float timeelapsedM = 0;
     private float ImmunityTimer = 0;
 
 
     public GameObject PwSound;
     private GameObject PwSoundInstace;
+    public GameObject dethloc;
+    public GameObject dethparticle;
 
     public GameObject top;
     public GameObject left;
@@ -39,7 +42,8 @@ public class PlayerScript : MonoBehaviour
     private Vector2 orgpos;
     void Die()
     {
-
+        dethparticle = Instantiate(dethparticle) as GameObject;
+        dethparticle.transform.position = dethloc.transform.position;
         Destroy(gameObject);
     }
 
@@ -53,6 +57,9 @@ public class PlayerScript : MonoBehaviour
         rightb = right.transform.position;
         leftb = left.transform.position;
 
+        timeelapsedP = piercingtime;
+        timeelapsedM = multiTime;
+
         orgpos.x = -64;
         orgpos.y = -2;
         m_MyAudioSource = GetComponent<AudioSource>();
@@ -65,30 +72,43 @@ public class PlayerScript : MonoBehaviour
 
     void Update() //Calls functions once per frame
     {
-        playerpos = gameObject.transform.position;
+        if (BgScroll.MoveBg == true)
+        {
+            m_Animator.SetBool("IsWalking", true);
+        }
+            playerpos = gameObject.transform.position;
         if (pierceshot == true)
         {
             PlayerBullet.pierce = true;
-            timeelapsed += Time.deltaTime;
-            if (timeelapsed >= piercingtime)
+            if (BgScroll.MoveBg == false)
+            {
+                timeelapsedP -= Time.deltaTime;
+            }
+
+            if (timeelapsedP <= 0)
             {
                 pierceshot = false;
                 PlayerBullet.pierce = false;
-                timeelapsed = 0;
+                timeelapsedP = piercingtime;
             }
 
         }
+
         if (multishot == true)
         {
             PlayerGun.multi = true;
-            timeelapsed += Time.deltaTime;
-            if (timeelapsed >= multiTime)
+            if (BgScroll.MoveBg == false) {
+                timeelapsedM -= Time.deltaTime;
+            }
+            
+            if (timeelapsedM <=0)
             {
                 multishot = false;
                 PlayerGun.multi = false;
-                timeelapsed = 0;
+                timeelapsedM = multiTime;
             }
         }
+
         if (health > 5)
         {
             health = 5;
@@ -100,7 +120,7 @@ public class PlayerScript : MonoBehaviour
         }
         if (ImmunityTimer > 0)
         {
-            ImmunityTimer--;
+            ImmunityTimer -= Time.deltaTime;
         }
         //if (BgScroll.MoveBg == false)
         //{
@@ -184,24 +204,41 @@ public class PlayerScript : MonoBehaviour
                 m_MyAudioSource.Play();
                 health--;
 
-                ImmunityTimer = 20;
+                ImmunityTimer = 0.2f;
             }
         }
         //checks if colliding with piercing powerup
         if (col.gameObject.tag == "piercing")
         {
             PwSoundInstace = Instantiate(PwSound) as GameObject;
-            pierceshot = true;
+            if (pierceshot == false)
+            {
+                pierceshot = true;
+            }
+            else if(pierceshot==true)
+            {
+                timeelapsedP += piercingtime;
+            }
+            
         }
         if (col.gameObject.tag == "Powerup")
         {
             PwSoundInstace = Instantiate(PwSound) as GameObject;
 
         }
+
         if (col.gameObject.tag == "multi")
         {
             PwSoundInstace = Instantiate(PwSound) as GameObject;
-            multishot = true;
+           
+            if (multishot == false)
+            {
+                multishot = true;
+            }
+            else if (multishot == true)
+            {
+               timeelapsedM += multiTime;
+            }
         }
         //checks is colliding with enemy hurtbox
       
@@ -211,13 +248,13 @@ public class PlayerScript : MonoBehaviour
     {
         if (ImmunityTimer <= 0)
         {
-            if (col.gameObject.tag == "pointy" || col.gameObject.tag == "laser" || col.gameObject.tag == "RangedEnemy1")
+            if (col.gameObject.tag == "pointy" || col.gameObject.tag == "laser" || col.gameObject.tag == "RangedEnemy1" || col.gameObject.tag == "chadb")
             {
                 HealthScore.HealthValue -= 1;
                 m_MyAudioSource.Play();
                 health--;
 
-                ImmunityTimer = 20;
+                ImmunityTimer = 0.2f;
             }
         }
     }

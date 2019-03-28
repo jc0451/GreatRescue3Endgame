@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyBullet : MonoBehaviour
 {
     public float speed = 0f;
+    public float rotation = 10;
     Vector2 _direction;
     bool isready;
     void Awake()
@@ -43,7 +44,7 @@ public class EnemyBullet : MonoBehaviour
         {
             Vector2 position = transform.position;
             position += _direction * speed * Time.deltaTime;
-            transform.Rotate(Vector3.forward * 10);
+            transform.Rotate(Vector3.forward * rotation);
             transform.position = position;
             Vector2 min = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
             Vector2 max = Camera.main.ViewportToWorldPoint(new Vector2(1, 1));

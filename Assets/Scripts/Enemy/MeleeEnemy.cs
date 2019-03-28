@@ -45,13 +45,7 @@ public class MeleeEnemy : MonoBehaviour
                 GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 255);
             }
         }
-        if (GameObject.Find("PlayerCharacter") == null)
-        {
-
-            
-
-            Destroy(gameObject);
-        }
+ 
         if (health <= 0)
         {
           

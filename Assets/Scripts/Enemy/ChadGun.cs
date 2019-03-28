@@ -17,6 +17,7 @@ public class ChadGun : MonoBehaviour
     public float fireratemin = 1;
     public float fireratemax = 5;
     private float firerate;
+    public float ultime;
 
 
 
@@ -32,7 +33,7 @@ public class ChadGun : MonoBehaviour
     void Update()
     {
        
-        if (ult >= 10)
+        if (ult >= ultime)
         {
             ultrue = true;
         }

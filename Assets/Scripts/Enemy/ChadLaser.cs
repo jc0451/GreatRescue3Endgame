@@ -10,6 +10,7 @@ public class ChadLaser : MonoBehaviour
     private float timeactual;
     float wait;
     float ult;
+    public float ultime;
     bool ultrue = false;
 
     // Start is called before the first frame update
@@ -23,7 +24,7 @@ public class ChadLaser : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (ult >= 10)
+        if (ult >= ultime)
         {
             ultrue = true;
         }

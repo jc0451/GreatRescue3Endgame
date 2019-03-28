@@ -60,7 +60,7 @@ public class PlayerGun : MonoBehaviour
                 Shoot();
             }
 
-            if (Input.GetKeyDown(KeyCode.Mouse0) && time >= firerate)
+            if (Input.GetKey(KeyCode.Mouse0) && time >= firerate)
             {
                 time = 0;
                 float randomPitch = Random.Range(lowPitchRange, highPitchRange);
@@ -100,22 +100,25 @@ public class PlayerGun : MonoBehaviour
 
     void Effect()
     {
-        if (multi == true)
+        if (multi == true && PlayerBullet.pierce ==false)
         {
             Instantiate(BulletPrefab2, firePoint.position, firePoint.rotation);
             Instantiate(BulletPrefab2, firePoint.position, firePoint2.rotation);
             Instantiate(BulletPrefab2, firePoint.position, firePoint3.rotation);
         }
-        else
+        if(multi == true && PlayerBullet.pierce == true)
         {
-            if (PlayerBullet.pierce == true)
-            {
-                Instantiate(BulletPrefab2, firePoint.position, firePoint.rotation);
-            }
-            else
-            {
-                Instantiate(BulletPrefab, firePoint.position, firePoint.rotation);
-            }
+            Instantiate(BulletPrefab3, firePoint.position, firePoint.rotation);
+            Instantiate(BulletPrefab2, firePoint.position, firePoint2.rotation);
+            Instantiate(BulletPrefab2, firePoint.position, firePoint3.rotation);
+        }
+        if (multi == false && PlayerBullet.pierce == true)
+        {
+            Instantiate(BulletPrefab3, firePoint.position, firePoint.rotation);
+        }
+        if (multi == false && PlayerBullet.pierce == false)
+        {
+            Instantiate(BulletPrefab, firePoint.position, firePoint.rotation);
         }
     }
 }

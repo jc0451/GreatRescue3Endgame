@@ -22,11 +22,13 @@ public class PiercingIcon : MonoBehaviour
         if (PlayerScript.pierceshot == true)
         {
             Rend1.enabled = true;
+            gameObject.transform.GetChild(0).gameObject.SetActive(true);
         }
 
         else
         {
             Rend1.enabled = false;
+            gameObject.transform.GetChild(0).gameObject.SetActive(false);
         }
         
     }

@@ -718,5 +718,25 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1854913878578960981, guid: 82a26109b373a99498c281e88966cf39,
+        type: 3}
+      propertyPath: m_text
+      value: <i>Press R to restart</i>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854913878578960981, guid: 82a26109b373a99498c281e88966cf39,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854913878578960981, guid: 82a26109b373a99498c281e88966cf39,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854913878578960981, guid: 82a26109b373a99498c281e88966cf39,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82a26109b373a99498c281e88966cf39, type: 3}

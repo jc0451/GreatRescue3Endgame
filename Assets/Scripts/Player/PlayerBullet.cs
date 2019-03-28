@@ -17,6 +17,11 @@ public class PlayerBullet : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector2.right * Time.deltaTime * bulletVelocity);
+
+        Vector2 min = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
+        Vector2 max = Camera.main.ViewportToWorldPoint(new Vector2(1, 1));
+        if ((transform.position.x < min.x) || (transform.position.x > max.x) || (transform.position.y) < min.y || (transform.position.y > max.y))
+        { Destroy(gameObject); }
         //  Destroy();
     }
 

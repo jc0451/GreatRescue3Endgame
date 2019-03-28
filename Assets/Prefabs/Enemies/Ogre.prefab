@@ -536,7 +536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 80
-  health: 5
+  health: 8
   time: 5
   DeathSound: {fileID: 981092470457941033, guid: a426096b6dbf9fc4f916897ba865206f,
     type: 3}

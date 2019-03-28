@@ -55,13 +55,7 @@ public class RangedEnemy2 : MonoBehaviour
             }
         }
         position = gameObject.transform.position;
-        if (GameObject.Find("PlayerCharacter") == null)
-        {
-
-
-
-            Destroy(gameObject);
-        }
+   
         if (charging == true)
         {
             m_Animator.SetTrigger("C");
