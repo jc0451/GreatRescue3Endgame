@@ -17,6 +17,7 @@ public class FirstSceneScript : MonoBehaviour
         if (Input.GetKeyDown("f1"))
         {
             ScoreScript.ScoreValue = 0;
+            BodyCount.Chad = 0;
             BodyCount.Goblin = 0;
             BodyCount.Troll = 0;
             BodyCount.Orc = 0;
